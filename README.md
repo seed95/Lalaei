@@ -1,6 +1,7 @@
 # Coding Style
 
 ##### Table of Contents
+**[Guard](#guard)**  
 **[Include](#include)**  
 **[Names](#names)**  
 **[Functions](#functions)**  
