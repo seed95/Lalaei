@@ -1,5 +1,11 @@
 # Coding Style
 
+##### Table of Contents  
+[Include](#include)  
+[Loops and Switch Statements](#loops)  
+...snip...    
+<a name="headers"/>
+
 ## The #define Gaurd
 All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be FILE_NAME_H.
 Example for class PnaScene
@@ -23,7 +29,7 @@ First include Qt headers after that, include my header files.
 #include <QThread>
 ...
 
-// Include my header files
+// Include project header files
 #include "pna_plotter.h"
 #include "pna_command.h"
 ...
