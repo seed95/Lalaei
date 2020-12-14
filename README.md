@@ -130,11 +130,65 @@ QString lastcommand() const { return m_lastcommand; }
 ```
 
 ## Qml
-Order 
 ### Signals
 ```
-signal updateClicked()
+signal rxfSamplingChanged(real oldValue)
 ```
+
+### The Component ID
+```
+Rectangle
+{
+    id: rect_container
+}
+```
+
+### Property Name
+```
+property color color_border_disabled: "#a0a0a0"//lowercase with underscore
+```
+
+### Function
+```
+function updateLables(maximumValue)
+{
+    ...
+}
+```
+
+### Example .qml File
+```
+import QtQuick 2.0
+
+Rectangle
+{
+    property string text_label: ""
+    property string text_unit:  ""
+    
+    property color color_border_enabled:  "#a0a0a0a"
+    property color color_border_disabled: "#a0a0a0a"
+    
+    signal changeValueDial(real value)
+    
+    id: container
+    width: 300
+    height: 300
+    
+    Rectangle
+    {
+        id: rect_canvas
+        ...
+    }
+    ...
+    
+    function enabled(valueTextInput)
+    {
+        ...
+    }
+    
+}
+```
+
 
 ## Conditionals
 ```
