@@ -1,17 +1,21 @@
 # Coding Style
 
 ##### Table of Contents
-**[The #define Guard](#guard)**  
-**[Include](#include)**  
-**[Name](#name)**  
-**[Function](#function)**  
-**[Conditional](#conditional)**  
-**[Loop and Switch Statement](#loop-and-switch-statement)**  
-**[Comment](#comment)**  
-**[Qml](#qml)**  
+**[Cpp The #define Guard](#cpp-guard)**  
+**[Cpp Include](#cpp-include)**  
+**[Cpp Name](#cpp-name)**  
+**[Cpp Function](#cpp-function)**  
+**[Cpp Conditional](#cpp-conditional)**  
+**[Cpp Loop and Switch Statement](#cpp-loop-and-switch-statement)**  
+**[Cpp Comment](#cpp-comment)**  
+**[Qml Signal](#qml-signal)**  
+**[Qml Component ID](#qml-component-id)**  
+**[Qml Property Name](#qml-property-name)**  
+**[Qml Function](#qml-function)**  
+**[Qml Example](#qml-example)**  
 <a name="headers"/>
 
-## Guard
+## Cpp Guard
 All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be FILE_NAME_H.
 Example for class PnaScene
 ```
@@ -21,7 +25,7 @@ Example for class PnaScene
 #endif // PNA_SCENE_H
 ```
 
-## Include
+## Cpp Include
 All `include` must be in header files and only the header for that class include to the .cpp file.
 First include Qt headers after that, include my header files.
 ```
@@ -56,7 +60,7 @@ PnaScene::PnaScene()
 ...
 ```
 
-## Name
+## Cpp Name
 ### File Names
 Filenames for `.cpp` and `.h` should be all lowercase and start with project name (pna). Word should be seprated with underscores(_) in the filenames.
 ```
@@ -113,7 +117,7 @@ fonts.qrc
 images.qrc
 ```
  
-## Function
+## Cpp Function
 ### Function Declaration
 Functions should start with a lower letter and have a capital letter for each new word after that.
 If the fucntion is not inside the class must be start with project name(Pna).
@@ -142,7 +146,7 @@ Only used for functions with one line code.
 QString lastcommand() const { return m_lastcommand; }
 ```
 
-## Conditional
+## Cpp Conditional
 ```
 if( condition )
 {
@@ -158,7 +162,7 @@ else
 }
 ```
 
-## Loop and Switch Statement
+## Cpp Loop and Switch Statement
 ```
 for( int i=0 ; i<10 ; i++ )
 {
@@ -189,7 +193,7 @@ do
 while( condition );
  ```
  
-## Comment
+## Cpp Comment
 ### Variable Comments
 Comment on variables when defining them.
 Inline comment should not touch `;` at the end of line.
@@ -214,13 +218,12 @@ QJsonValue pna_getBoardValue(int id, QString key)
 }
 ```
 
-## Qml
-### Signals
+## Qml Signal
 ```
 signal rxfSamplingChanged(real oldValue)
 ```
 
-### The Component ID
+## Qml Component ID
 ```
 Rectangle
 {
@@ -228,12 +231,12 @@ Rectangle
 }
 ```
 
-### Property Name
+## Qml Property Name
 ```
 property color color_border_disabled: "#a0a0a0"//lowercase with underscore
 ```
 
-### Function
+## Qml Function
 ```
 function updateLables(maximumValue)
 {
@@ -241,7 +244,7 @@ function updateLables(maximumValue)
 }
 ```
 
-### Example .qml File
+## Qml Example
 ```
 import QtQuick 2.0
 
