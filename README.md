@@ -1,4 +1,4 @@
-# Code Style
+# Coding Style
 
 ## The #define Gaurd
 All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be FILE_NAME_H.
@@ -47,18 +47,18 @@ PnaScene::PnaScene()
 
 ## Names
 ### File Names
-Filenames for `.cpp` and `.h` should be all lowercase and can include underscires(_).
+Filenames for `.cpp` and `.h` should be all lowercase and start with project name (pna). Word should be seprated with underscores(_) in the filenames.
 ```
 pna_core.cpp
 pna_core.h
 ```
-Filenames for Qml Objects
+Filenames for Qml Objects start with project name(Pna)
 ```
 PnaAboutDialog.qml
 ```
 
 ### Common Variable Names
-Variable names in class, struct, global, local must be lowercase with underscore
+Variable names in struct, global, local must be lowercase with underscore
 ```
 QString variable_name; // loswercase with underscore.
 ```
@@ -75,7 +75,7 @@ private:
 ```
 
 ### Class Names
-Class names should always start with Pna
+Class names should always start with project name(Pna) and should be camel case.
 ```
 class PnaScene
 {
@@ -104,10 +104,12 @@ images.qrc
  
 ## Functions
 ### Function Declaration
-If the fucntion is not inside the class must be start with `pna_`.
+Functions should start with a lower letter and have a capital letter for each new word after that.
+If the fucntion is not inside the class must be start with project name(Pna).
+For better understanding refer to following examples:
 ```
 // In a class:
-QString funcName(QString varName, int varName2, int defaultArgument = 1);
+QString funcName(QString var_name, int var_name2, int default_argument = 1);
 
 // Without class:
 // For example see pna_utils.h
@@ -117,7 +119,7 @@ int pna_rawRead(PnaRawBuffer *raw_buf, char *dest);
 
 ### Function Definition
 ```
-QString PnaScene::setBid(qreal bid)
+void PnaCommand::configBoard(bool debug_mode, int interface_mode)
 {
   ...
 }
@@ -127,6 +129,78 @@ QString PnaScene::setBid(qreal bid)
 Only used for functions with one line code.
 ```
 QString lastcommand() const { return m_lastcommand; }
+```
+
+## Conditionals
+```
+if( condition )
+{
+   //codes go here
+}
+else if( test_variable==true )
+{
+    //codes go here
+}
+else
+{
+    //codes go here
+}
+```
+
+## Loops and Switch Statements
+```
+for( int i=0 ; i<10 ; i++ )
+{
+    //codes go here
+}
+
+while( condition )
+{
+    //codes go here
+}
+
+switch( condition )
+{
+    case 1:
+      //codes go here
+      break;
+    case 2:
+      ...
+    default:
+      //codes go here
+      break;
+}
+
+do
+{
+    //codes go here
+}
+while( condition );
+ ```
+ 
+## Comments
+### Variable Comments
+Comment on variables when defining them.
+Inline comment should not touch `;` at the end of line.
+```
+// In pna_scene.h
+QString m_calfopen; //file name for read calibration data
+```
+
+### Function Comments
+Comment on functions when definition them. That means comment inside the `.cpp` files.
+```
+// In pna_utils.cpp
+/*
+* @id: id board. First board id is 0.
+* @return: Value of config board based on key
+*          and id. If not found return
+*          QJsonValue(null).
+*/
+QJsonValue pna_getBoardValue(int id, QString key)
+{
+  ...
+}
 ```
 
 ## Qml
@@ -186,77 +260,5 @@ Rectangle
         ...
     }
     
-}
-```
-
-
-## Conditionals
-```
-if (condition)
-{
-   //codes go here
-}
-else if (condition)
-{
-    //codes go here
-}
-else
-{
-    //codes go here
-}
-```
-
-## Loops and Switch Statements
-```
-for (int i=0 ; i<10 ; i++)
-{
-    //codes go here
-}
-
-while (condition)
-{
-    //codes go here
-}
-
-switch (condition)
-{
-    case 1:
-      //codes go here
-      break;
-    case 2:
-      ...
-    default:
-      //codes go here
-      break;
-}
-
-do
-{
-    //codes go here
-}
-while (condition);
- ```
- 
- ## Comments
- ### Variable Comments
- Comment on variables when defining them
- ```
- // In pna_scene.h
- QString m_calfopen;//file name for read calibration data
- ```
- 
- ### Function Comments
- Comment on functions when definition them. That means comment inside the `.cpp` files.
- ```
- // In pna_utils.cpp
-/*
- * @id: id board. First board id is 0.
- * @return: Value of config board based on key
- *          and id. If not found return
- *          QJsonValue(null).
- */
-QJsonValue pna_getBoardValue(int id, QString key)
-{
-    ...
 }
 ```
