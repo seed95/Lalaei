@@ -220,7 +220,7 @@ QJsonValue pna_getBoardValue(int id, QString key)
 
 ## Qml Signal
 ```
-signal rxfSamplingChanged(real oldValue)
+signal blockClicked(int idBlock, string txtValue)
 ```
 
 ## Qml Component ID
