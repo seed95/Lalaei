@@ -12,7 +12,7 @@ Example for class PnaScene
 
 ## Include
 All `include` must be in header files and only the header for that class include to the .cpp file.
-First include Qt headers. After include Qt headers, include my header files.
+First include Qt headers after that, include my header files.
 ```
 // In pna_scene.h:
 #ifndef PNA_SCENE_H
@@ -23,7 +23,7 @@ First include Qt headers. After include Qt headers, include my header files.
 #include <QThread>
 ...
 
-// After include Qt headers, include my header files
+// Include my header files
 #include "pna_plotter.h"
 #include "pna_command.h"
 ...
