@@ -1,17 +1,17 @@
 # Coding Style
 
 ##### Table of Contents
-**[Guard](#guard)**  
+**[The #define Guard](#guard)**  
 **[Include](#include)**  
-**[Names](#names)**  
-**[Functions](#functions)**  
-**[Conditionals](#conditionals)**  
-**[Loops and Switch Statements](#loops-and-switch-statements)**  
-**[Comments](#comments)**  
+**[Name](#name)**  
+**[Function](#function)**  
+**[Conditional](#conditional)**  
+**[Loop and Switch Statement](#loop-and-switch-statement)**  
+**[Comment](#comment)**  
 **[Qml](#qml)**  
 <a name="headers"/>
 
-## Gaurd
+## Guard
 All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be FILE_NAME_H.
 Example for class PnaScene
 ```
@@ -56,7 +56,7 @@ PnaScene::PnaScene()
 ...
 ```
 
-## Names
+## Name
 ### File Names
 Filenames for `.cpp` and `.h` should be all lowercase and start with project name (pna). Word should be seprated with underscores(_) in the filenames.
 ```
@@ -113,7 +113,7 @@ fonts.qrc
 images.qrc
 ```
  
-## Functions
+## Function
 ### Function Declaration
 Functions should start with a lower letter and have a capital letter for each new word after that.
 If the fucntion is not inside the class must be start with project name(Pna).
@@ -142,7 +142,7 @@ Only used for functions with one line code.
 QString lastcommand() const { return m_lastcommand; }
 ```
 
-## Conditionals
+## Conditional
 ```
 if( condition )
 {
@@ -158,7 +158,7 @@ else
 }
 ```
 
-## Loops and Switch Statements
+## Loop and Switch Statement
 ```
 for( int i=0 ; i<10 ; i++ )
 {
@@ -189,7 +189,7 @@ do
 while( condition );
  ```
  
-## Comments
+## Comment
 ### Variable Comments
 Comment on variables when defining them.
 Inline comment should not touch `;` at the end of line.
