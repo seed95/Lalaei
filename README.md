@@ -1,12 +1,16 @@
 # Coding Style
 
-##### Table of Contents  
-[Include](#include)  
-[Loops and Switch Statements](#loops)  
-...snip...    
+##### Table of Contents
+**[Include](#include)**  
+**[Names](#names)**  
+**[Functions](#functions)**  
+**[Conditionals](#conditionals)**  
+**[Loops and Switch Statements](#loops-and-switch-statements)**  
+**[Comments](#comments)**  
+**[Qml](#qml)**  
 <a name="headers"/>
 
-## The #define Gaurd
+## Gaurd
 All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be FILE_NAME_H.
 Example for class PnaScene
 ```
